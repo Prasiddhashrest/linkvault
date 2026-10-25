@@ -1,0 +1,30 @@
+# Local tooling / secrets
+.DS_Store
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.iml
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.yarn/
+frontend/.vite/
+
+# Java
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+
+# Persisted bookmark data (private; NEVER commit)
+backend/data/
+data/
+*.mv.db
+*.trace.db
+
+# Maven distribution fetched by the wrapper
+backend/.mvn/apache-maven-*/
+backend/.mvn/*.tar.gz

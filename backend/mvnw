@@ -1,0 +1,21 @@
+#!/bin/sh
+# Minimal Maven wrapper, Maven 3.9.11. Use system Maven when available.
+set -eu
+if command -v mvn >/dev/null 2>&1; then
+  exec mvn "$@"
+fi
+HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+MAVEN_HOME="$HERE/.mvn/apache-maven-3.9.11"
+if [ ! -x "$MAVEN_HOME/bin/mvn" ]; then
+  if ! command -v curl >/dev/null 2>&1; then
+    echo 'Maven is missing and curl is unavailable. Install Maven 3.9+.' >&2
+    exit 1
+  fi
+  echo 'Downloading Maven 3.9.11 for LinkVault (first use only)...'
+  mkdir -p "$HERE/.mvn"
+  ARCHIVE="$HERE/.mvn/apache-maven-3.9.11-bin.tar.gz"
+  curl --fail --location --retry 2 --output "$ARCHIVE" 'https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.11/apache-maven-3.9.11-bin.tar.gz'
+  tar -xzf "$ARCHIVE" -C "$HERE/.mvn"
+  rm -f "$ARCHIVE"
+fi
+exec "$MAVEN_HOME/bin/mvn" "$@"

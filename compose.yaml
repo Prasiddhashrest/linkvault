@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      LINKVAULT_DATA_DIR: /app/data
+    volumes:
+      - linkvault_data:/app/data
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  linkvault_data:
