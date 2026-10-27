@@ -1,7 +1,6 @@
 # LinkVault 
 
-A responsivefull-stack bookmark management application for saving, organizing, searching, and managing useful resources through a clean, structured interface. It combines a responsive React frontend with a Spring Boot REST API and persistent local storage. The project focuses on practical full-stack engineering concepts including CRUD workflows, API design, validation, persistence, testing, containerization, and frontend/backend integration. Using **Load sample links** for a six-bookmark demo.
-
+A responsivefull-stack bookmark management application for saving, organizing, searching, and managing useful resources through a clean, structured interface. It combines a responsive React frontend with a Spring Boot REST API and persistent local storage. The project focuses on practical full-stack engineering concepts including CRUD workflows, API design, validation, persistence, testing, containerization, and frontend/backend integration.
 
 **Features:**
 1. Create, edit, delete, and favorite bookmarks
@@ -14,7 +13,6 @@ A responsivefull-stack bookmark management application for saving, organizing, s
 8. Persistent bookmark storage across application restarts
 9. User-friendly validation and API error handling
 10. Responsive interface for desktop and smaller screens
-
 
 ## Demo:
 
