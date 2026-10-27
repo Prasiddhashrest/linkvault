@@ -1,12 +1,72 @@
-# LinkVault ✦
+# LinkVault 
 
-A responsive personal bookmark manager built with **React + TypeScript + Vite**, **Java 21 + Spring Boot**, and a **persistent H2 database**. Its card-based interface is inspired by a visual bookmark dashboard.
+A responsivefull-stack bookmark management application for saving, organizing, searching, and managing useful resources through a clean, structured interface. It combines a responsive React frontend with a Spring Boot REST API and persistent local storage. The project focuses on practical full-stack engineering concepts including CRUD workflows, API design, validation, persistence, testing, containerization, and frontend/backend integration. Using **Load sample links** for a six-bookmark demo.
 
-**What works:** create, list, edit, delete, search by title/URL/notes/category, category filters, favorites, recently added, grid/list view, sorting and helpful error messages. Data persists across application restarts. Use **Load sample links** for a six-bookmark demo.
 
-> LinkVault is a local project, not a hosted website. You run it on your Mac or through Docker Compose. Opening the GitHub repository shows the code; it does not automatically make the app live on the Internet.
+**Features:**
+1. Create, edit, delete, and favorite bookmarks
+2. Search across titles, URLs, notes, and categories
+3. Filter resources by category
+4. View recently added bookmarks
+5. Sort saved resources
+6. Switch between grid and list layouts
+7. Load sample bookmarks for demonstration
+8. Persistent bookmark storage across application restarts
+9. User-friendly validation and API error handling
+10. Responsive interface for desktop and smaller screens
 
-## 1. Open the project
+## Architecture
+
+```text
+Browser
+  │
+  ▼
+React + TypeScript + Vite
+  │
+  │ REST / JSON
+  ▼
+Spring Boot API
+  │
+  ├── Controller
+  │
+  ├── Service
+  │
+  └── JPA Repository
+        │
+        ▼
+    H2 Database
+```
+
+The frontend communicates with the backend through REST endpoints under /api/bookmarks.
+
+The backend follows a layered structure separating request handling, business logic, persistence, and data models.
+
+### Engineering Focus
+This project demonstrates:
+- full-stack application architecture
+- REST API design
+- CRUD workflows
+- frontend/backend integration
+- persistent data storage
+- request validation
+- API testing
+- containerized development
+- maintainable separation of application layers
+
+
+## Demo:
+
+**1.Main Dashboard with all Categories:**
+![LinkVault bookmark library](link-vault.png)
+
+**2. Adding a new bookmark:**
+![LinkVault bookmark create](create-bookmark-demo.png)
+
+
+## Run the Demo:
+Note: LinkVault is a local project, not a hosted website. You run it on your Mac or through Docker Compose. Opening the GitHub repository shows the code; it does not automatically make the app live on the Internet.
+
+### 1. Open the project
 
 1. Download the ZIP and double-click it to unzip.
 2. Open **VS Code** → **File → Open Folder...** → choose the inner **`linkvault`** folder (the one with `frontend/`, `backend/`, and `compose.yaml`).
@@ -107,7 +167,7 @@ If `git push` asks for a GitHub password: GitHub does not accept account passwor
 
 You can also use VS Code's **Source Control → Publish to GitHub** after signing into GitHub there.
 
-## 5. Architecture
+## 5. Mapping
 
 ```text
 Browser
@@ -143,22 +203,16 @@ linkvault/
 ├── compose.yaml               Starts both services with persistent H2 volume
 └── README.md                  This guide
 ```
-
-## 7. Four-day checklist from the assignment
-
-- [x] UI and project structure
-- [x] API CRUD and H2 file persistence
-- [x] Search, filter, favorite, edit and delete
-- [x] Validation and user-facing API errors
-- [x] Java endpoint tests and Postman test collection
-- [x] Frontend and backend Dockerfiles + Compose volume
-- [x] Beginner setup and GitHub instructions
-- [ ] **On your Mac:** start both services and run the Java tests
-- [ ] **On your Mac:** verify Docker Compose build
-- [ ] **On your Mac:** capture actual screenshots and 45–90 second demo recording
-- [ ] **On your Mac:** create GitHub repo and push it
-
-**Important:** Generated source was reviewed for structure but an online dependency download, production build and end-to-end test were *not* run in the creation environment. Please run the commands above before presenting this as a tested submission.
+### Future Improvements
+Potential extensions include:
+- user authentication
+- cloud-hosted persistence
+- bookmark tagging
+- import/export support
+- richer link previews
+- shared bookmark collections
+- pagination for larger libraries
+- production deployment
 
 ### Notes
 
