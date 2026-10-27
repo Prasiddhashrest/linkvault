@@ -8,7 +8,7 @@ A responsive personal bookmark manager built with **React + TypeScript + Vite**,
 
 ## 1. Open the project
 
-1. Download the ZIP from ChatGPT and double-click it to unzip.
+1. Download the ZIP and double-click it to unzip.
 2. Open **VS Code** → **File → Open Folder...** → choose the inner **`linkvault`** folder (the one with `frontend/`, `backend/`, and `compose.yaml`).
 3. In VS Code click **Terminal → New Terminal**.
 
