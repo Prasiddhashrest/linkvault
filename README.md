@@ -15,6 +15,16 @@ A responsivefull-stack bookmark management application for saving, organizing, s
 9. User-friendly validation and API error handling
 10. Responsive interface for desktop and smaller screens
 
+
+## Demo:
+
+**1.Main Dashboard with all Categories:**
+![LinkVault bookmark library](link-vault.png)
+
+**2. Adding a new bookmark:**
+![LinkVault bookmark create](create-bookmark-demo.png)
+
+
 ## Architecture
 
 ```text
@@ -52,15 +62,6 @@ This project demonstrates:
 - API testing
 - containerized development
 - maintainable separation of application layers
-
-
-## Demo:
-
-**1.Main Dashboard with all Categories:**
-![LinkVault bookmark library](link-vault.png)
-
-**2. Adding a new bookmark:**
-![LinkVault bookmark create](create-bookmark-demo.png)
 
 
 ## Run the Demo:
